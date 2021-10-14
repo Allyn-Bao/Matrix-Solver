@@ -90,3 +90,4 @@ if __name__ == "__main__":
     dimension, num_rows, matrix = console_input()
     console_print_matrix(matrix)
     print("\n")
+

@@ -1,5 +1,6 @@
 import math
 
+
 def console_input():
     """
     prompt for console input of the matrix
@@ -122,7 +123,7 @@ def row_in_REF(matrix, row_index):
     :param row_index: int, index of the row being examined
     :return: True if row is in REF from, otherwise False
     """
-    for i in range(len(matrix[row_index])-1):
+    for i in range(len(matrix[row_index]) - 1):
         if i < row_index and matrix[row_index][i] != 0:
             return False
         if i == row_index and (matrix[row_index][i] != 1 and matrix[row_index][i] != 0):
@@ -216,7 +217,7 @@ def matrix_solver(matrix):
             # locate leading coefficient in row
             lc_index = locate_leading_coefficient_in_row(matrix, i)
             # in the case where all elements of the row == 0
-            if lc_index == -1: # no L.C. found
+            if lc_index == -1:  # no L.C. found
                 break
             # reduce leading coefficient to a leading one - divide all elements of row by the L.C.
             lc = matrix[i][lc_index]
@@ -257,4 +258,3 @@ if __name__ == "__main__":
         print("UNIQUE SOLUTION")
     elif number_solutions == 2:
         print("INFINITE SOLUTION")
-

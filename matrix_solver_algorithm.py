@@ -226,7 +226,7 @@ def matrix_solver(matrix):
             if lc_index != i:
                 # subtract row by prev row to eliminate current L.C.
                 matrix = add_rows(matrix, i, lc_index, subtract=True)
-    # RREF FORM
+    # To RREF FORM
     for i in range(len(matrix)):
         # eliminate calculation rounding errors
         matrix = error_rounder(matrix)
